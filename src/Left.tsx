@@ -7,7 +7,7 @@ import Five from "./assets/5..png";
 import Six from "./assets/6..png";
 import Seven from "./assets/7..png";
 import Bs from './assets/bs.png'
-import Bp from './assets/bP.png'
+import Bp from './assets/bp.png'
 import Hr from './assets/hr.png'
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import Chart from './Chart'
