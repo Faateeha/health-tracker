@@ -66,12 +66,15 @@ export default function ActivityGrowthChart() {
   };
 
   return (
-    <Box p="4" bg="white" borderRadius="md" boxShadow="md" mt="3">
+    <Box p="4" bg="white" borderRadius="md" boxShadow="md" mt="3" width="100%">
       <Text fontSize="xl" fontWeight="bold" mb="4">
         Activity Growth Chart
       </Text>
-      <Bar data={data} options={options} />
+      <Box width="100%" height={{ base: "300px", sm: "400px", md: "500px" }}>
+        <Bar data={data} options={options} />
+      </Box>
     </Box>
   );
 }
+
 

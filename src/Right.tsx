@@ -1,17 +1,18 @@
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import rulerWeight from "./assets/rulerWeight.png";
-import BMI from "./assets/bmi.png"
-import Body from "./assets/body.png"
-import Sub1 from "./assets/sub1.png"
-
+import BMI from "./assets/bmi.png";
+import Body from "./assets/body.png";
+import Sub2 from "./assets/sub2.png";
+import Ar1 from "./assets/Ar1.png";
+import Ar2 from "./assets/Ar2.png";
 
 export default function Right() {
   return (
-    <Box p="4">
-      <Text as="h3" fontSize="xl" fontWeight="bold" color="" p="4">
+    <Box p="4" >
+      <Text as="h3" fontSize="xl" fontWeight="bold" color="" pl="2">
         BMI Calculator
       </Text>
-      <Flex p="4" gap="4">
+      <Flex direction={{ base: "column", lg: "row" }} p="4" gap="4">
         {/* Left Column for Weight and Height */}
         <Flex direction="column" gap="4">
           {/* Weight Container */}
@@ -24,9 +25,17 @@ export default function Right() {
             textAlign="center"
           >
             <Text fontWeight="bold">Weight</Text>
-            <Text fontSize="lg" fontWeight="semibold">70 kg</Text>
+            <Text fontSize="lg" fontWeight="semibold">
+              70 kg
+            </Text>
             {/* Ruler Image */}
-            <Image src={rulerWeight} alt="Weight Ruler" mt="2" width="100%" height="20px" />
+            <Image
+              src={rulerWeight}
+              alt="Weight Ruler"
+              mt="2"
+              width="100%"
+              height="20px"
+            />
           </Box>
 
           {/* Height Container */}
@@ -39,9 +48,17 @@ export default function Right() {
             textAlign="center"
           >
             <Text fontWeight="bold">Height</Text>
-            <Text fontSize="lg" fontWeight="semibold">175 cm</Text>
+            <Text fontSize="lg" fontWeight="semibold">
+              175 cm
+            </Text>
             {/* Ruler Image */}
-            <Image src={rulerWeight} alt="Height Ruler" mt="2" width="100%" height="20px" />
+            <Image
+              src={rulerWeight}
+              alt="Height Ruler"
+              mt="2"
+              width="100%"
+              height="20px"
+            />
           </Box>
         </Flex>
 
@@ -57,22 +74,127 @@ export default function Right() {
         >
           <Text fontWeight="semibold">Body Mass Index</Text>
           <Flex my="4" gap="12">
-          <Text fontSize="lg" fontWeight="semibold">24.9</Text>
-          <Text fontSize="lg" bg="#D6FFDD" p="1" fontWeight="semibold" color="black" borderRadius="md">You're healthy!</Text>
+            <Text fontSize="lg" fontWeight="semibold">
+              24.9
+            </Text>
+            <Text
+              fontSize="lg"
+              bg="#D6FFDD"
+              p="1"
+              fontWeight="semibold"
+              color="black"
+              borderRadius="md"
+            >
+              You're healthy!
+            </Text>
           </Flex>
-          <Image src={BMI} alt="Height Ruler" mt="2" width="100%" height="80px" />
-
-          
+          <Image
+            src={BMI}
+            alt="Height Ruler"
+            mt="2"
+            width="100%"
+            height="80px"
+          />
         </Box>
       </Flex>
       <hr />
-      <Flex>
-        <Box>
-            <Text>hello</Text>
-        </Box>
-        <Box>
-        <Image src={Body} alt="body" mt="2" width="100%" height="px" />
-        <Image src={Sub1} alt="body" mt="2" width="100%" height="10px" />
+      <Flex justifyContent="space-between" alignItems="flex-start" mt="6" p="4">
+        {/* Text on the left */}
+        <Flex direction="column">
+          <Text as="h2" fontSize="lg" fontWeight="bold" color="black">
+            Body Measurements
+          </Text>
+          <Text>Last checked 2 Days Ago</Text>
+          <Text bg="gray.200" p="1" my="2" borderRadius="md">
+            Inverted Triangle Body Shape
+          </Text>
+
+          <Box mt="16">
+            <Box
+              bg="#4A4949"
+              color="white"
+              mb="2"
+              borderRadius="lg"
+              width="120px"
+              p="4"
+            >
+              <Text>Chest (in)</Text>
+              <Text display="inline-flex" alignItems="center">
+                44.5
+                <Box as="span" ml="1" display="inline-flex">
+                  <Image src={Ar1} alt="arrow icon" />
+                </Box>
+              </Text>
+            </Box>
+
+            <Box
+              bg="#4A4949"
+              color="white"
+              mb="2"
+              borderRadius="lg"
+              width="120px"
+              p="4"
+            >
+              <Text>Waist (in)</Text>
+              <Text display="inline-flex" alignItems="center">
+                34
+                <Box as="span" ml="1" display="inline-flex">
+                  <Image src={Ar2} alt="arrow icon" />
+                </Box>
+              </Text>
+            </Box>
+
+            <Box
+              bg="#4A4949"
+              color="white"
+              mb="2"
+              borderRadius="lg"
+              width="120px"
+              p="4"
+            >
+              <Text>Hip (in)</Text>
+              <Text display="inline-flex" alignItems="center">
+                42.5
+                <Box as="span" ml="1" display="inline-flex">
+                  <Image src={Ar2} alt="arrow icon" />
+                </Box>
+              </Text>
+            </Box>
+          </Box>
+        </Flex>
+
+        {/* Image container on the right */}
+        <Box position="relative" width="150px" height="350px" mt="8" >
+          <Image src={Body} alt="body"   />
+
+          {/* Sub Image positioned over Body Image */}
+          <Image
+            src={Sub2}
+            alt="sub-image"
+            position="absolute"
+            top="12"
+            left="0"
+            width="100%"
+            height="10px"
+          />
+          <Image
+            src={Sub2}
+            alt="sub-image"
+            position="absolute"
+            top="24"
+            left="0"
+            width="100%"
+            height="10px"
+          />
+          <Image
+            src={Sub2}
+            alt="sub-image"
+            position="absolute"
+            top="32"
+            left="0"
+            width="100%"
+            height="10px"
+          />
         </Box>
       </Flex>
     </Box>

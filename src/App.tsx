@@ -4,7 +4,7 @@ import Right from "./Right";
 
 function App() {
   return (
-    <Flex height="100%" width="100vw" bg="#FBEBD6" overflow="hidden">
+    <Flex height="100%"  direction={{ base: "column", lg: "row" }} width="100vw" bg="#FBEBD6" overflow="hidden">
       {/* Left Side (Sidebar) */}
       <Box width="66.66%" >
         <Left />
