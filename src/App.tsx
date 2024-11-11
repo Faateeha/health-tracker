@@ -1,22 +1,22 @@
 import { Flex, Box } from "@chakra-ui/react";
-import Left from "./Left";  // Import your Left component
-import Right from "./Right"; // Assuming you have a Right component for the main content
+import Left from "./Left";  
+import Right from "./Right"; 
 
-function YourComponent() {
+function App() {
   return (
-    <Flex height="100vh" width="100vw">
+    <Flex height="100%" width="100vw" bg="#FBEBD6" overflow="hidden">
       {/* Left Side (Sidebar) */}
-      <Box width="250px" bg="gray.200">
+      <Box width="66.66%" >
         <Left />
       </Box>
 
       {/* Right Side (Main Content) */}
-      <Box flex="1" bg="gray.300">
+      <Box width="33.33%" bg="white" borderRadius="2xl" >
         <Right />
       </Box>
     </Flex>
   );
 }
 
-export default YourComponent;
+export default App;
 
