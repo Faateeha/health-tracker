@@ -8,6 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartOptions,
 } from "chart.js";
 
 // Register chart components
@@ -21,23 +22,23 @@ export default function ActivityGrowthChart() {
       {
         label: "Yoga",
         data: [30, 45, 40, 50, 55, 60, 70, 65, 60, 75, 80, 70],
-        backgroundColor: "#CA6B6E", // Red with opacity
+        backgroundColor: "#CA6B6E", 
       },
       {
         label: "Meditation",
         data: [20, 35, 30, 40, 45, 50, 55, 60, 50, 65, 60, 55],
-        backgroundColor: "#478F96", // Blue with opacity
+        backgroundColor: "#478F96", 
       },
       {
         label: "Aerobics",
         data: [40, 50, 45, 60, 65, 70, 75, 80, 70, 85, 80, 75],
-        backgroundColor: "#D08726", // Green with opacity
+        backgroundColor: "#D08726", 
       },
     ],
   };
 
   // Chart options
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
     scales: {
       y: {
