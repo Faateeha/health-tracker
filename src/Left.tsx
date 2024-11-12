@@ -12,6 +12,7 @@ import Hr from './assets/hr.png'
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import Chart from './Chart'
 
+
 export default function Left() {
   const bloodSugarData = [80, 85, 90, 85, 80, 82, 88];
   const heartRateData = [72, 75, 78, 74, 72, 73, 76];
