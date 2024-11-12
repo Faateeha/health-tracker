@@ -31,10 +31,10 @@ export default function Left() {
       </Box>
 
       <Box flex="1" bgGradient="to-r" gradientFrom="#F8DEBD" gradientTo ="#FBEBD6" p="4">
-        <Text as="h3" fontSize="xl" fontWeight="bold" color="black">
+        <Text as="h3" fontSize="3xl" fontWeight="bold" color="black">
           Health Overview
         </Text>
-        <Text fontSize="sm" color="gray.500">
+        <Text fontSize="lg" color="gray.500">
           November 12, 2021
         </Text>
 
@@ -132,7 +132,7 @@ export default function Left() {
           gap="4"
           width="100%"
         >
-          <Text fontSize="lg" fontWeight="bold">
+          <Text fontSize="lg" fontWeight="bold" color="black">
             Upcoming Appointment
           </Text>
 
