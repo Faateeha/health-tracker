@@ -71,7 +71,7 @@ export default function ActivityGrowthChart() {
       <Text fontSize="xl" fontWeight="bold" mb="4">
         Activity Growth Chart
       </Text>
-      <Box width="100%" height={{ base: "300px", sm: "400px", md: "500px" }}>
+      <Box width="100%" height={{ base: "200px", sm: "400px", md: "500px" }}>
         <Bar data={data} options={options} />
       </Box>
     </Box>
