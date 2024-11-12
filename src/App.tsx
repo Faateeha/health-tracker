@@ -13,19 +13,18 @@ function App() {
     >
       {/* Left Side (Sidebar) */}
       <Box
-        flex={{ base: "1", lg: "2" }} // Occupies more space on large screens
-        width={{ base: "100%", lg: "66.66%" }} // Full width on small screens
-        bg="#FBEBD6" // Match background on smaller screens
+        flex={{ base: "1", lg: "2" }} 
+        width={{ base: "100%", lg: "66.66%" }} 
+        bg="#FBEBD6" 
       >
         <Left />
       </Box>
 
-      {/* Right Side (Main Content) */}
       <Box
-        flex={{ base: "1", lg: "1" }} // Equal space as Left on smaller screens
-        width={{ base: "100%", lg: "33.33%" }} // Full width on small screens
+        flex={{ base: "1", lg: "1" }} 
+        width={{ base: "100%", lg: "33.33%" }} 
         bg="white"
-        borderRadius={{ base: "none", lg: "2xl" }} // Remove border-radius for small screens
+        borderRadius={{ base: "none", lg: "2xl" }} 
       >
         <Right />
       </Box>

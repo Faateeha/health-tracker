@@ -142,11 +142,12 @@ export default function Left() {
             borderRadius="md"
             textAlign="center"
             fontWeight="semibold"
+            color="black"
           >
             November 20, 2024
           </Box>
 
-          <Text fontSize="md">Consultation with Dr. James</Text>
+          <Text fontSize="md" color="black">Consultation with Dr. James</Text>
         </Flex>
       </Box>
     </Flex>

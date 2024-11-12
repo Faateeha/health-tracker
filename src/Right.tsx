@@ -8,8 +8,8 @@ import Ar2 from "./assets/Ar2.png";
 
 export default function Right() {
   return (
-    <Box p="4" >
-      <Text as="h3" fontSize="xl" fontWeight="bold" color="" pl="2">
+    <Box p="4">
+      <Text as="h3" fontSize="xl" fontWeight="bold" color="black" pl="2">
         BMI Calculator
       </Text>
       <Flex direction={{ base: "column", lg: "row" }} p="4" gap="4">
@@ -21,21 +21,23 @@ export default function Right() {
             p="4"
             borderRadius="md"
             boxShadow="md"
-            width="200px"
+            width={{ base: "100%", lg: "200px" }}
             textAlign="center"
+            color="black"
           >
-            <Text fontWeight="bold">Weight</Text>
-            <Text fontSize="lg" fontWeight="semibold">
+            <Text fontWeight="bold" color="black">Weight</Text>
+            <Text fontSize="lg" fontWeight="semibold" color="black">
               70 kg
             </Text>
             {/* Ruler Image */}
-            <Image
-              src={rulerWeight}
-              alt="Weight Ruler"
-              mt="2"
-              width="100%"
-              height="20px"
-            />
+            <Box display="flex" justifyContent="center" mt="2">
+              <Image
+                src={rulerWeight}
+                alt="Weight Ruler"
+                width="50%"
+                height="20px"
+              />
+            </Box>
           </Box>
 
           {/* Height Container */}
@@ -44,21 +46,23 @@ export default function Right() {
             p="4"
             borderRadius="md"
             boxShadow="md"
-            width="200px"
+            width={{ base: "100%", lg: "200px" }}
             textAlign="center"
+            color="black"
           >
-            <Text fontWeight="bold">Height</Text>
-            <Text fontSize="lg" fontWeight="semibold">
+            <Text fontWeight="bold" color="black">Height</Text>
+            <Text fontSize="lg" color="black" fontWeight="semibold">
               175 cm
             </Text>
             {/* Ruler Image */}
-            <Image
-              src={rulerWeight}
-              alt="Height Ruler"
-              mt="2"
-              width="100%"
-              height="20px"
-            />
+            <Box display="flex" justifyContent="center" mt="2">
+              <Image
+                src={rulerWeight}
+                alt="Weight Ruler"
+                width="50%"
+                height="20px"
+              />
+            </Box>
           </Box>
         </Flex>
 
@@ -68,7 +72,7 @@ export default function Right() {
           p="4"
           borderRadius="md"
           boxShadow="md"
-          width="250px"
+          width={{ base: "100%", lg: "250px" }}
           textAlign=""
           color="white"
         >
@@ -104,8 +108,8 @@ export default function Right() {
           <Text as="h2" fontSize="lg" fontWeight="bold" color="black">
             Body Measurements
           </Text>
-          <Text>Last checked 2 Days Ago</Text>
-          <Text bg="gray.200" p="1" my="2" borderRadius="md">
+          <Text color="black">Last checked 2 Days Ago</Text>
+          <Text bg="gray.200" color="black" p="1" my="2" borderRadius="md">
             Inverted Triangle Body Shape
           </Text>
 
@@ -164,8 +168,8 @@ export default function Right() {
         </Flex>
 
         {/* Image container on the right */}
-        <Box position="relative" width="150px" height="350px" mt="8" >
-          <Image src={Body} alt="body"   />
+        <Box position="relative" width="150px" height="350px" mt="8">
+          <Image src={Body} alt="body" />
 
           {/* Sub Image positioned over Body Image */}
           <Image
